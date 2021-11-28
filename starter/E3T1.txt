@@ -1,3 +1,12 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
 
+1. i-0955c5f8233680975 is performing SSH brute force attacks against 10.192.10.227. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password.
+2. 10.192.11.12 is performing SSH brute force attacks against i-0c4129dfd324c1177. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password.
+
+GuardDuty detected a brutforce attack from the instance i-0955c5f8233680975 on the instance i-0c4129dfd324c1177
+
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+GuardDuty continuously and automaticaly analyze network, account and data access activity at scale, providint continuous monitoring of your AWS accounts
+GuardDuty intelligently detect threads using machine learning, anomality detection and integrated thread intelligence to identify and prioritize potential threads.
+GuardDuty then takes action by reviewing detailed findings in the console, integrate into event management or workflow systems, or trigger AWS Lambda for automated remediation or prevention.

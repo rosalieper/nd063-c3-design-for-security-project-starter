@@ -2,4 +2,14 @@
 
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 
+1. To reduce the risk of SSH attacks, ensure none of your SSH services on your Linux hosts are exposed. We can open ports only needed for communication and change the default TCP 22 which is usually open to the internet
+2. Deploying a security information and event management (SIEM) solution that supports analysis of events happening on cloud platforms can help you spot and mitigate SSH attacks on Linux AWS. SIEM solutions collect logs, analyze them, identify suspicious events in your network, and alert you about them in real time. You can also set up automated incident workflows that greatly reduce the incident response time.
+3. We can add an extra layer of security ly the two factor authentication.
+
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+1. Writing bucket policies that define access to specific buckets and objects. You can use a bucket policy to grant access across AWS accounts, grant public or anonymous permissions, and allow or block access based on conditions.
+2. Using Amazon S3 Block Public Access as a centralized way to limit public access. Block Public Access settings override bucket policies and object permissions. Be sure to enable Block Public Access for all accounts and buckets that you don't want publicly accessible.
+3.Writing AWS Identity and Access Management (IAM) user policies that specify the users that can access specific buckets and objects. IAM policies provide a programmatic way to manage Amazon S3 permissions for multiple users.
+
+basically implementing the best practices listed here. https://aws.amazon.com/premiumsupport/knowledge-center/secure-s3-resources/

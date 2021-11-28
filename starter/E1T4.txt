@@ -1,0 +1,6 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+=> From the diagram the Web service instance has no security group attached . The security group acts as a firewall that permits traffic from a certain protocol, port and IP. Here we want traffic only from the load balancer.
+# Poor practice 2
+=> From the steps, we skipped the creation of a new user with specific permissions for the given task.

@@ -1,13 +1,19 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
+Checkov: https://www.checkov.io/
 
 ### Example vulnerability
+secret storage (secrets like password, ssh keys, ...). Storing such data in plain text is dangerous and can easily be exposed.
 
 ##Scan AMI’s or containers for OS vulnerabilities
+Cloudpassage: https://www.cloudpassage.com/
 
 ### Example vulnerability
+Remote code execution
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
+AWS config
 
 ### Example vulnerability
+Lack of access restrictions

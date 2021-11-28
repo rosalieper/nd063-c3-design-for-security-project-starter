@@ -1,3 +1,6 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
-
+1. EC2 instance should not have a public IPV4 address.
+        suggestion: Modify the public IP addressing attribute of your subnet
+2. EC2 instances should be managed by AWS systems manager.
+        suggestion: Manager console to remediate this
 Bonus - provide recommendations on how to remediate the vulnerabilities.

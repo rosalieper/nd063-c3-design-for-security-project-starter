@@ -1,8 +1,12 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+We could move the web application instance to the private subnet and use a nat gateway for communication between the application and the world.
 
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+No. VPC CIDR blocks can be overlapping or identical, which may lead to unexpected results. We should use a route tables to control which instances can access resources in Amazon S3 via the endpoint.
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+NO. To encrypt your existing Amazon S3 objects, you can use Amazon S3 Batch Operations. You provide S3 Batch Operations with a list of objects to operate on, and Batch Operations calls the respective API to perform the specified operation.
 
 # What would happen if the original cloud formation templates are applied to this environment.
+If I try to do an update to the environment, cloudformation fails to do that and claims there is no new change or update to apply to the environment. Which I will say is not quite true but cloud formation doesn't know that apparently.
